@@ -30,6 +30,11 @@ export const routes: Routes = [
   },  {
     path: 'project-detail',
     loadComponent: () => import('./pages/project-detail/project-detail.page').then( m => m.ProjectDetailPage)
-  },]
+  },
+{
+  path: '**',
+  loadComponent: () => import('./pages/login/login.page').then( m => m.LoginPage)
+}
+]
  
 
